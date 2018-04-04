@@ -1,0 +1,35 @@
+<% include header %>
+<head>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<section id="register">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-wrap">
+                    <h1>Register a new account</h1>
+                    <form action="/register" id="registration-form" method="post">
+                        <div class="form-group">
+                            <label for="username" class="sr-only">Username</label>
+                            <input type="text" name="username" class="form-control" placeholder="username"></br>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="email"></br>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="password"></br>
+                        </div>
+
+                        <input id="btn-login" class="btn btn-custom btn-lg btn-block"  type="submit" value="Register">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<% include footer %>

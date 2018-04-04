@@ -1,0 +1,52 @@
+<% include header %>
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+
+        <div class="text-muted pull-right">
+            <%= entry.date %>
+        </div>
+        <%= entry.author %> :
+        <%= entry.title %>
+    </div>
+    <div class="panel-body">
+        <img class="img-responsive" src="<%= entry.image %>">
+        <%= entry.body %>
+
+        <div class="alertcontainer">
+            <div class="row"> </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="alert alert-info alert-labeled">
+                        <div class="alert-labeled-row">
+                    <span class="alert-label alert-label-left alert-labelled-cell">
+                        <i class="glyphicon glyphicon-comment"></i>
+                    </span>
+                            <p class="alert-body alert-body-right alert-labelled-cell">
+                               Read what others thought about this post in the comments below:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="comments">
+
+            <% entry.comments.forEach(function(comment){ %>
+            <% include comment %>
+
+
+            <% console.log("THE COMMENT: ", comment); %>
+            <% }) %>
+        </div>
+
+    </div>
+
+
+    <div class="panel-body">
+
+        <a class="btn btn-default" href="<%= entry._id %>/new-comment">Add new comment</a>
+
+    </div>
+</div>

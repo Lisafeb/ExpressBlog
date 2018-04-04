@@ -1,0 +1,56 @@
+<% include header %>
+<a href="#bottom" class="btn btn-primary pull-right">
+    Write a new entry
+</a></br></br>
+<% if (entries.length) { %>
+<% entries.forEach(function(entry) { %>
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+
+        <div class="text-muted pull-right">
+            <%= entry.date %>
+        </div>
+        <%= entry.author  %> <i> posted this: </i>  <a class="btn btn-default" href="blogs/<%= entry._id %>"> <%= entry.title %></a>
+    </div>
+    <div class="panel-body">
+        <%= entry.body %>
+
+        <div>
+
+        </div>
+    </div>
+</div>
+<% }) %>
+
+<% } else { %>   No entries! <a href="/new-entry">Add entry!</a>
+<% } %>
+<div id="bottom">
+    <% if(!currentUser){ %>
+    <div class="container">
+        <div class="row"> </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="alert alert-info alert-labeled">
+                    <div class="alert-labeled-row">
+                    <span class="alert-label alert-label-left alert-labelled-cell">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                    </span>
+                        <p class="alert-body alert-body-right alert-labelled-cell">
+                            <a href="/register">Register</a> or <a href="/login">Log In</a> to add a blogpost.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% } else { %>
+    <% include new-entry %>
+    <% } %>
+</div>
+
+
+
+<% include footer %>
+

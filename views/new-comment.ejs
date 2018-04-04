@@ -1,0 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <title>Express Blog</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+
+<h1>Add a new comment to <%= blog.title %></h1>
+<form action="/blogs/<%= blog._id %>" method="POST">
+  <input type="hidden" id="containerID" name="containerID">
+  <div class="form-group">
+
+    <input type="text" class="form-control" id="commentAuthor" name="commentAuthor" value= <%= currentUser.username%> readonly>
+  </div>
+  <div class="form-group">
+
+    <textarea class="form-control" id="comm" name="comm" placeholder="Write a comment" rows="3" required></textarea>
+  </div>
+  <div class="form-group">
+    <input type="submit" value="Post comment" class="btn btn-primary">
+  </div>
+</form>
+
+<% include footer %>

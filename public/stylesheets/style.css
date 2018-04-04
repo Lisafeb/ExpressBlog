@@ -1,0 +1,119 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#login,
+#register{
+  padding-top: 50px
+}
+
+#register .form-wrap {
+  width: 30%;
+  margin: 0 auto;
+}
+#login .form-wrap{
+  width: 30%;
+  margin: 0 auto;
+}
+
+#login h1 {
+  color: #2abfa3;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+#register h1 {
+  color: #2abfa3;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+#login .form-group {
+  margin-bottom: 25px;
+}
+#login .btn.btn-custom {
+  background-color: #2abfa3;
+  color: #fff;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+#login .btn.btn-custom:hover {
+  background-color: #fff;
+  color: #2abfa3;
+  border: 2px solid #2abfa3;
+}
+#login .forget {
+  font-size: 13px;
+  text-align: center;
+  display: block;
+}
+
+
+.form-control {
+  color: #212121;
+}
+.btn-custom {
+  color: #fff;
+  background-color: #2abfa3;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+  background-color: #fff;
+  color: #2abfa3;
+  border: 2px solid #2abfa3;
+}
+
+
+#footer {
+  color: #6d6d6d;
+  font-size: 12px;
+  text-align: center;
+}
+#footer p {
+  margin-bottom: 0;
+}
+#footer a {
+  color: inherit;
+}
+
+.btn-primary{
+  background-color: #2abfa3;
+}
+.alert-labeled{
+  padding: 0px;
+}
+
+.alert-labeled-row{
+  display: table-row;
+  padding: 0px;
+}
+.alertcontainer{
+  width: 75%;
+}
+.alert-labelled-cell{
+  padding: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.alert-labeled .close > *{
+  padding:10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.alert-label{
+  vertical-align: middle;
+  background: #BCE8F1;
+  width: auto;
+  padding: 10px 15px;
+  height: 100%;
+  font-size:1.1em;
+}
